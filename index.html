@@ -5,6 +5,51 @@
 	<title> SphynxHenry </title>
 	<script src="//code.jquery.com/jquery-3.2.1.min.js" async defer></script>
 	<script type="text/javascript" src="//brython.info/src/brython.js"></script>
+	<script>
+		(function(){
+			$.isMobile = function(){ 
+				return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent); 
+			};
+
+		$(document).ready(function(){
+			$( "a#msg_link" ).click( function(){
+				var msg = $( "#msg_text" ).val()
+				, tel = $( "#msg_tel" ).val()
+				, web_base = "https://web.whatsapp.com/send?"
+				, mob_base = "whatsapp://send?"
+				, link_href = $( "a#msg_link" )[ 0 ].href
+				, query = {
+					"phone" : $( "#msg_tel" ) 
+					, "text" : $( "#msg_text" )
+				}
+				, base
+				, urlencode_dict = function( d ){
+					var result = "";
+
+					for( k in d ){
+						result += k + "=" + d[ k ]
+						result += "&"
+					}
+
+					return result;
+				};
+
+				if( $.isMobile() ){
+					base = mob_base;
+				} else{
+					base = web_base;
+				};
+
+				link_href = base + urlencode_dict( query );
+			} );
+
+		}); // ---- end document ready
+
+		window.onload = function(){
+		}; // ---- end window.onload
+
+		})(); // ---- end function
+	</script>
 </head>
 
 <body onload="brython()">
@@ -44,7 +89,7 @@
 </div>
 
 <div id="web_whatsapp_test">
-	<a href="whatsapp://send?phone=85255372574&text=This!">Click to Send This!</a>
+	<a id="msg_link" target="_blank">Click to Send <input type="text" id="msg_text"/> to <input type="tel" id="msg_tel"/>!</a>
 </div>
 
 </body>
