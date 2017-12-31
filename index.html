@@ -17,7 +17,7 @@
 				, tel = $( "#msg_tel" ).val()
 				, web_base = "https://web.whatsapp.com/send?"
 				, mob_base = "whatsapp://send?"
-				, link_href = $( "a#msg_link" )[ 0 ].href
+				, msg_anchor = $( "a#msg_link" )
 				, query = {
 					"phone" : $( "#msg_tel" ) 
 					, "text" : $( "#msg_text" )
@@ -40,7 +40,7 @@
 					base = web_base;
 				};
 
-				link_href = base + urlencode_dict( query );
+				msg_anchor.attr( "href", base + urlencode_dict( query ) );
 			} );
 
 		}); // ---- end document ready
@@ -89,7 +89,15 @@
 </div>
 
 <div id="web_whatsapp_test">
-	<a id="msg_link" href="#" target="_blank">Click to Send <input type="text" id="msg_text"/> to <input type="tel" id="msg_tel"/>!</a>
+	<p>
+		<span>msg</span>
+		<input type="text" id="msg_text"/>
+	</p>
+	<p>
+		<span>tel</span>
+		<input type="tel" id="msg_tel"/>
+	</p>
+	<a id="msg_link" href="#" target="_blank">Click to Send msg to tel through WhatsApp!</a>
 </div>
 
 </body>
