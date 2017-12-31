@@ -3,15 +3,30 @@
 
 <head>
 	<title> SphynxHenry </title>
+	<!--Style-->
+	<style>
+
+	div[ id ]:nth-child( odd ) {
+		background-color: #EEE;
+	}
+
+	div[ id ]:nth-child( even ) {
+		background-color: #CCC;
+	}
+
+	</style>
+
+	<!--Script-->
 	<script src="//code.jquery.com/jquery-3.2.1.min.js" ></script>
 	<script type="text/javascript" src="//brython.info/src/brython.js"></script>
-	<script>
+	<script> 
 		(function( $ ){
 			$.isMobile = function(){ 
 				return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent); 
 			};
 
 		$(document).ready(function(){
+			// for web_whatsapp_test
 			$( "a#msg_link" ).click( function(){
 				var msg = $( "#msg_text" ).val()
 				, tel = $( "#msg_tel" ).val()
@@ -43,6 +58,15 @@
 				msg_anchor.attr( "href", base + urlencode_dict( query ) );
 			} );
 
+			// for mob_js_test
+			$( "#btn_to_run" ).click( function(){
+				try{
+					eval( $( "#js_to_run" ).val() );
+				} catch( err ){
+					alert( err.message );
+				}
+			} );
+
 		}); // ---- end document ready
 
 		window.onload = function(){
@@ -50,6 +74,7 @@
 
 		})( jQuery ); // ---- end function
 	</script>
+
 </head>
 
 <body onload="brython()">
@@ -71,8 +96,8 @@
 
 <!--brython-->
 <div id="brython">
-	<p>You may have to manually allow the https access to the site before you could iframe it:</p>
-	<p><a href="https://brython.info/console.html">https://brython.info/console.html</a></p>
+	<span>You may have to manually allow the https access to the site before you could iframe it:</span><br/>
+	<span><a href="https://brython.info/console.html">https://brython.info/console.html</a></span><br/>
 	<iframe src="//brython.info/console.html" width="770" height="346" scrolling="no"></iframe>
 </div>
 
@@ -89,15 +114,38 @@
 </div>
 
 <div id="web_whatsapp_test">
-	<p>
-		<span>msg</span>
+	<span>
+		<span>msg : </span>
 		<input type="text" id="msg_text"/>
-	</p>
-	<p>
-		<span>tel</span>
+	</span>
+	<br/>
+	<span>
+		<span>tel : </span>
 		<input type="tel" id="msg_tel"/>
-	</p>
+	</span>
+	<br/>
 	<a id="msg_link" href="#" target="_blank">Click to Send msg to tel through WhatsApp!</a>
+</div>
+
+<div id="mob_js_test">
+	<textarea id="js_to_run" rows="10" cols="50">
+
+(function( $ ){
+
+$(document).ready(function(){
+
+}); // ---- end document ready
+
+window.onload = function(){
+}; // ---- end window.onload
+
+})( jQuery ); // ---- end function
+
+	</textarea>
+	<br/>
+	<button id="btn_to_run">
+		Click to run JS in upper box!
+	</button>
 </div>
 
 </body>
