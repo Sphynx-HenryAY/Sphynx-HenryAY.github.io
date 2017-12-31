@@ -19,8 +19,8 @@
 				, mob_base = "whatsapp://send?"
 				, msg_anchor = $( "a#msg_link" )
 				, query = {
-					"phone" : $( "#msg_tel" ) 
-					, "text" : $( "#msg_text" )
+					"phone" : $( "#msg_tel" ).val() 
+					, "text" : $( "#msg_text" ).val()
 				}
 				, base
 				, urlencode_dict = function( d ){
