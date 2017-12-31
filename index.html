@@ -3,10 +3,10 @@
 
 <head>
 	<title> SphynxHenry </title>
-	<script src="//code.jquery.com/jquery-3.2.1.min.js" async defer></script>
+	<script src="//code.jquery.com/jquery-3.2.1.min.js" ></script>
 	<script type="text/javascript" src="//brython.info/src/brython.js"></script>
 	<script>
-		(function(){
+		(function( $ ){
 			$.isMobile = function(){ 
 				return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent); 
 			};
@@ -48,7 +48,7 @@
 		window.onload = function(){
 		}; // ---- end window.onload
 
-		})(); // ---- end function
+		})( jQuery ); // ---- end function
 	</script>
 </head>
 
@@ -89,7 +89,7 @@
 </div>
 
 <div id="web_whatsapp_test">
-	<a id="msg_link" target="_blank">Click to Send <input type="text" id="msg_text"/> to <input type="tel" id="msg_tel"/>!</a>
+	<a id="msg_link" href="#" target="_blank">Click to Send <input type="text" id="msg_text"/> to <input type="tel" id="msg_tel"/>!</a>
 </div>
 
 </body>
