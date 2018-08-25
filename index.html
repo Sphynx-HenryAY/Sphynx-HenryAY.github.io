@@ -106,8 +106,6 @@
 					.replace( "{{ data }}", code_data ) 
 				);
 			} );
-			
-			$( "div" ).not( "#res_list, #qr_gen, #show_qr" ).hide();
 
 		}); // ---- end document ready
 
@@ -191,6 +189,9 @@
 (function( $ ){
 
 $(document).ready(function(){
+
+// MORSE "SOS"
+window.navigator.vibrate([100,30,100,30,100,30,200,30,200,30,200,30,100,30,100,30,100])
 
 }); // ---- end document ready
 
