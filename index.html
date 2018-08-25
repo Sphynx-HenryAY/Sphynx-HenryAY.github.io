@@ -188,10 +188,12 @@
 
 (function( $ ){
 
+navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
+
 $(document).ready(function(){
 
 // MORSE "SOS"
-window.navigator.vibrate([100,30,100,30,100,30,200,30,200,30,200,30,100,30,100,30,100])
+navigator.vibrate([100,30,100,30,100,30,200,30,200,30,200,30,100,30,100,30,100]);
 
 }); // ---- end document ready
 
