@@ -152,7 +152,11 @@
     <div id="brython_onload">
         <button id="load_brython">Load brython</button>
         <script type="text/python">
-            from browser import document, alert @document["mybutton"].bind("click") def echo(event): alert(document["zone"].value)
+            from browser import document, alert
+
+            @document["mybutton"].bind("click")
+            def echo(event):
+            	alert(document["zone"].value)
         </script>
 
         <div style="display=none;">
