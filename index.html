@@ -93,11 +93,11 @@
 				} );
 
 				$("#load_brython_console").click( function(){
-					$( "#brython" ).append( "<iframe src=\"//brython.info/console.html\" width=\"770\" height=\"346\" scrolling=\"no\"></iframe>" );
+					$( "#brython" ).append( "<iframe src=\"\/\/brython.info\/console.html\" width=\"770\" height=\"346\" scrolling=\"no\"><\/iframe>" );
 					$(this).hide();
 				} );
 				$("#load_brython").click( function(){
-					$("head").append( "<script type=\"text/javascript\" src=\"//brython.info/src/brython.js\"></script>" );
+					$("head").append( "<script type=\"text\/javascript\" src=\"\/\/brython.info\/src\/brython.js\"><\/script>" );
 					brython();
 					$(this).hide();
 				} );
