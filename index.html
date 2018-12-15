@@ -96,10 +96,6 @@
 					$( "#brython" ).append( "<iframe src=\"\/\/brython.info\/console.html\" width=\"770\" height=\"346\" scrolling=\"no\"><\/iframe>" );
 					$(this).hide();
 				} );
-				$("#load_brython").click( function(){
-					brython();
-					$(this).hide();
-				} );
 			}); // ---- end document ready
 			window.onload = function(){
 			}; // ---- end window.onload
@@ -109,7 +105,7 @@
 
 </head>
 
-<body>
+<body onload="brython()">
 
     <!--res_list-->
     <div id="res_list">
