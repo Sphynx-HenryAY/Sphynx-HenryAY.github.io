@@ -146,17 +146,16 @@
     </div>
 
     <div id="brython_onload">
-		<script type="text/python">
-		from browser import document, alert
+        <script type="text/python">
+            from browser import document, alert
+            def echo(event):
+            	alert(document["zone"].value)
+           	document["mybutton"].bind("click", echo)
+        </script>
 
-		# bind event 'click' on button to function echo
-
-		def echo(ev):
-		    alert(document["zone"].value)
-
-		document["mybutton"].bind("click", echo)
-		</script>
-		<input id="zone"><button id="mybutton">click !</button>
+        <div>
+            <input id="zone"><button id="mybutton">click !</button>
+        </div>
     </div>
 
     <div id="web_whatsapp_test">
