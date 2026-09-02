@@ -28,7 +28,7 @@ window.SITE = {
     tagline: "Dev + Sec + Ops + Data Analysis",
     location: "Hong Kong",
     summary:
-      "I build the tooling that lets SOC teams move faster — modular SOAR playbooks, SIEM pipelines, and AI that turns messy incident data into something an analyst can act on. Currently at I-TRACING in Hong Kong, in charge of AI development for APAC after a year of SOAR R&D.",
+      "I build the tooling that lets SOC teams move faster — modular SOAR playbooks, SIEM pipelines, and AI that turns messy incident data into something an analyst can act on. Currently at I-TRACING in Hong Kong, in charge of AI development for APAC after a year on a global SOAR tooling team.",
     email: "pyc05079@gmail.com",
     phone: "+852 5537 2574",
     github: "https://github.com/Sphynx-HenryAY",
@@ -53,7 +53,7 @@ window.SITE = {
       url: "https://i-tracing.com",
       start: "2025-07",
       end: null,
-      summary: "French cybersecurity group. Tooling and AI for SOAR / SOC operations across APAC.",
+      summary: "French cybersecurity group. SOAR tooling and AI for SOC operations.",
       tags: ["SOAR", "AI", "ITSM", "APAC"],
       roles: [
         {
@@ -65,11 +65,11 @@ window.SITE = {
           ],
         },
         {
-          title: "Developer, Tooling — SOAR R&D & Maintenance",
+          title: "Developer, Tooling",
           start: "2025-07",
           end: "2026-07",
           bullets: [
-            "Owned SOAR R&D and maintenance on the tooling team.",
+            "Member of a ~15-person global tooling team working on SOAR R&D and maintenance.",
             "Built an AI feature that prettifies and formats ITSM tickets by case type, with per-client customization such as translation.",
           ],
         },
