@@ -7,7 +7,7 @@
     "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
   ];
 
-  const DOMAIN_CLASS = { Dev: "dev", Sec: "sec", Ops: "ops", Data: "data" };
+  const DOMAIN_CLASS = { Dev: "dev", Sec: "sec", Ops: "ops", Data: "data", AI: "ai" };
 
   function formatMonth(value) {
     if (!value) return "Present";

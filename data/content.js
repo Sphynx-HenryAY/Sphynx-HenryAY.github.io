@@ -281,6 +281,15 @@ window.SITE = {
     ],
     Ops: ["Docker", "Kubernetes", "Ansible", "Logic Apps", "n8n", "UiPath"],
     Data: ["ELKB", "Splunk", "Grafana", "KNIME"],
+    /* Utilization, not model training: agents, LLM-backed apps, prompt work. */
+    AI: [
+      "AI agents",
+      "Hermes Agent",
+      "Coding agents",
+      "XSOAR agents",
+      "LLM-powered apps",
+      "Prompt engineering",
+    ],
   },
 
   education: [

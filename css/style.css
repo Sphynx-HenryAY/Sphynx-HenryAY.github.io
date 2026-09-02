@@ -13,6 +13,7 @@
   --sec: #f0a07a;
   --ops: #7ab8f0;
   --data: #c4a6f0;
+  --ai: #f0c14a;
   --radius: 14px;
   --max: 1120px;
   --header-h: 64px;
@@ -325,6 +326,8 @@ main {
 .domain-card.ops .label { color: var(--ops); }
 .domain-card.data .count,
 .domain-card.data .label { color: var(--data); }
+.domain-card.ai .count,
+.domain-card.ai .label { color: var(--ai); }
 
 section {
   padding: 72px 0 0;
@@ -528,7 +531,7 @@ section {
 
 .skill-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   gap: 14px;
 }
 
@@ -552,6 +555,7 @@ section {
 .skill-col.sec h3 { color: var(--sec); }
 .skill-col.ops h3 { color: var(--ops); }
 .skill-col.data h3 { color: var(--data); }
+.skill-col.ai h3 { color: var(--ai); }
 
 .skill-col ul {
   list-style: none;
@@ -671,7 +675,6 @@ section {
 
 @media (max-width: 900px) {
   .hero,
-  .skill-grid,
   .about-grid {
     grid-template-columns: 1fr;
   }
