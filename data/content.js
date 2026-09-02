@@ -177,7 +177,7 @@ window.SITE = {
       year: "2026",
       description:
         "Vision-driven Android agent. Describe a goal; it screenshots the screen, a model decides the next tap or swipe, and an accessibility service performs it. Supports OpenRouter vision models or on-device Gemma 3n, plus recorded macros.",
-      tags: ["Kotlin", "Android", "AI agent"],
+      tags: ["Android", "AI agent"],
       links: {
         github: "https://github.com/Sphynx-HenryAY/PromptClick",
       },
@@ -258,7 +258,6 @@ window.SITE = {
     Dev: [
       "Python",
       "JavaScript",
-      "Kotlin",
       "Java",
       "HTML",
       "CSS",
@@ -309,5 +308,5 @@ window.SITE = {
     { name: "English", level: "Proficient" },
   ],
 
-  hobbies: ["3D printing", "Investing", "Spanish", "Basketball"],
+  hobbies: ["3D printing", "Investing", "Basketball"],
 };
