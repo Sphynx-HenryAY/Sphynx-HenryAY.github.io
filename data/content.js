@@ -54,7 +54,7 @@ window.SITE = {
       start: "2025-07",
       end: null,
       summary: "French cybersecurity group. SOAR tooling and AI for SOC operations.",
-      tags: ["SOAR", "AI", "ITSM", "APAC"],
+      tags: ["SOAR", "AI", "APAC"],
       roles: [
         {
           title: "AI Developer, APAC",
@@ -70,7 +70,7 @@ window.SITE = {
           end: "2026-07",
           bullets: [
             "Member of a ~15-person global tooling team working on SOAR R&D and maintenance.",
-            "Built an AI feature that prettifies and formats ITSM tickets by case type, with per-client customization such as translation.",
+            "Solid development progress using AI to improve day-to-day operations.",
           ],
         },
       ],
@@ -138,14 +138,14 @@ window.SITE = {
   /* featured: true pins a card higher. category is "work" or "open". */
   projects: [
     {
-      title: "SOAR AI — ITSM ticket formatting",
+      title: "AI for operations improvement",
       category: "work",
       featured: true,
       year: "2025",
       org: "I-TRACING",
       description:
-        "AI feature that prettifies and formats ITSM tickets from SOAR by case type, with client-level customization such as translation.",
-      tags: ["SOAR", "AI", "ITSM"],
+        "Solid development progress on using AI to improve SOC and SOAR day-to-day operations.",
+      tags: ["SOAR", "AI"],
       links: {},
     },
     {
